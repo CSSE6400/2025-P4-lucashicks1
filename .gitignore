@@ -1,6 +1,8 @@
 # AWS credentials file
 credentials
 
+.vscode
+
 # Default Terrform .gitignore
 # Local .terraform directories
 **/.terraform/*
