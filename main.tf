@@ -41,7 +41,8 @@ data "aws_ami" "latest" {
 }
 
 resource "aws_instance" "hextris-server" {
-  ami           = data.aws_ami.latest.id
+  #   ami           = data.aws_ami.latest.id
+  ami           = "ami-08b5b3a93ed654d19"
   instance_type = "t2.micro"
   key_name      = "vockey"
   user_data     = file("./ serve-hextris.sh")
@@ -100,5 +101,4 @@ resource "aws_security_group" "hextris-server" {
 
 output "hextris-url" {
   value = aws_instance.hextris-server.public_ip
-
 }
